@@ -10,3 +10,128 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* 通用响应式工具 */
+
+/* 响应式容器 - 根据屏幕大小自动调整宽度和内边距 */
+.container-responsive {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 响应式文本大小 */
+.text-responsive {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.5rem);
+}
+
+.title-responsive {
+    font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
+}
+
+/* 响应式间距工具 */
+.mt-responsive {
+    margin-top: clamp(1rem, 3vw, 3rem);
+}
+
+.mb-responsive {
+    margin-bottom: clamp(1rem, 3vw, 3rem);
+}
+
+.py-responsive {
+    padding-top: clamp(1rem, 3vw, 3rem);
+    padding-bottom: clamp(1rem, 3vw, 3rem);
+}
+
+.px-responsive {
+    padding-left: clamp(1rem, 3vw, 3rem);
+    padding-right: clamp(1rem, 3vw, 3rem);
+}
+
+/* 响应式间距调整 */
+@media (min-width: 640px) {
+    .container-responsive {
+        max-width: 640px;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-responsive {
+        max-width: 768px;
+    }
+    
+    .hide-md {
+        display: none;
+    }
+    
+    .show-md {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-responsive {
+        max-width: 1024px;
+    }
+    
+    .hide-lg {
+        display: none;
+    }
+    
+    .show-lg {
+        display: block;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container-responsive {
+        max-width: 1280px;
+    }
+}
+
+/* 仅在移动设备上显示 */
+@media (max-width: 767px) {
+    .mobile-only {
+        display: block;
+    }
+    
+    .desktop-only {
+        display: none;
+    }
+}
+
+/* 仅在桌面设备上显示 */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none;
+    }
+    
+    .desktop-only {
+        display: block;
+    }
+}
+
+/* 根据设备方向调整 */
+@media (orientation: landscape) {
+    .landscape-only {
+        display: block;
+    }
+    
+    .portrait-only {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) {
+    .landscape-only {
+        display: none;
+    }
+    
+    .portrait-only {
+        display: block;
+    }
+}

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60">
+  <!-- Logo 背景 -->
+  <rect x="10" y="10" width="40" height="40" rx="5" fill="#0071e3" />
+  
+  <!-- 游戏控制器形状 -->
+  <rect x="20" y="25" width="20" height="10" rx="5" fill="white" />
+  <circle cx="15" cy="30" r="3" fill="white" />
+  <circle cx="45" cy="30" r="3" fill="white" />
+  <circle cx="30" cy="18" r="3" fill="white" />
+  <circle cx="30" cy="42" r="3" fill="white" />
+  
+  <!-- 文字 -->
+  <text x="60" y="35" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#1d1d1f">
+    TinyGame
+  </text>
+  
+  <!-- 悬停时的动画效果 - 当SVG在网页中使用时可通过CSS控制 -->
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    rect, circle {
+      transition: all 0.3s ease;
+    }
+    svg:hover rect:first-child {
+      fill: #0077ed;
+      animation: pulse 2s infinite;
+    }
+  </style>
+</svg> 

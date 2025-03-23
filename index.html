@@ -44,11 +44,7 @@
             <nav class="flex justify-between items-center py-4">
                 <div class="flex items-center">
                     <a href="/" class="text-2xl font-bold text-apple-darkblue flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M13 7H7v6h6V7z" />
-                            <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd" />
-                        </svg>
-                        <span>TinyGame</span>
+                        <img src="assets/images/logos/tinygame-logo.svg" alt="TinyGame Logo" class="h-10 w-auto mr-2">
                     </a>
                 </div>
                 
@@ -75,18 +71,56 @@
         </div>
     </header>
     
-    <!-- Hero区域 -->
-    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-16 md:py-24 bg-gradient-animate">
-        <div class="container mx-auto px-4">
+    <!-- 改进的Hero区域 -->
+    <section class="relative overflow-hidden">
+        <!-- 背景渐变 -->
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-gradient-animate"></div>
+        
+        <!-- 波浪形状装饰 -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" class="w-full h-20 md:h-32">
+                <path fill="#f5f5f7" fill-opacity="1" d="M0,128L48,138.7C96,149,192,171,288,181.3C384,192,480,192,576,181.3C672,171,768,149,864,149.3C960,149,1056,171,1152,181.3C1248,192,1344,192,1392,192L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            </svg>
+        </div>
+        
+        <!-- 浮动装饰元素 -->
+        <div class="absolute top-0 left-0 w-full h-full">
+            <div class="absolute top-1/4 left-10 w-12 h-12 bg-white opacity-10 rounded-full animate-pulse" style="animation-delay: 0s;"></div>
+            <div class="absolute bottom-1/3 right-1/4 w-16 h-16 bg-white opacity-10 rounded-full animate-pulse" style="animation-delay: 0.5s;"></div>
+            <div class="absolute top-1/2 right-10 w-8 h-8 bg-white opacity-10 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <!-- 内容 -->
+        <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
             <div class="flex flex-col md:flex-row items-center">
-                <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in">
-                    <h1 class="text-3xl md:text-5xl font-bold mb-4">挑战你的多任务处理能力</h1>
-                    <p class="text-lg md:text-xl mb-6">测试你同时处理多项任务的能力，提升你的认知技能和反应速度</p>
-                    <a href="#featured-game" class="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 font-bold py-3 px-6 rounded-lg shadow-lg inline-block hover:shadow-xl transform hover:-translate-y-1">立即开始游戏</a>
+                <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in text-white">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">挑战你的<br>多任务处理能力</h1>
+                    <p class="text-lg md:text-xl mb-6 text-white/90">测试你同时处理多项任务的能力，提升你的认知技能和反应速度。多项微任务，一次性挑战！</p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#featured-game" class="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 font-bold py-3 px-6 rounded-lg shadow-lg inline-block hover:shadow-xl transform hover:-translate-y-1 text-center">立即开始游戏</a>
+                        <a href="#how-to-play" class="border-2 border-white text-white hover:bg-white/10 transition-colors duration-300 font-bold py-3 px-6 rounded-lg inline-block text-center">了解玩法</a>
+                    </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center animate-fade-in">
-                    <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=Multitask+Game" alt="Multitask Game" class="rounded-lg shadow-xl max-w-full h-auto img-hover">
+                    <div class="relative">
+                        <!-- 主图片 -->
+                        <img src="https://placehold.co/600x400/651fff/ffffff?text=Multitask+Game" alt="Multitask Game" class="rounded-lg shadow-xl max-w-full h-auto img-hover relative z-10">
+                        <!-- 装饰框 -->
+                        <div class="absolute -top-4 -right-4 w-full h-full border-4 border-white/30 rounded-lg z-0"></div>
+                        <!-- 装饰点 -->
+                        <div class="absolute -bottom-3 -left-3 w-6 h-6 bg-yellow-400 rounded-full"></div>
+                        <div class="absolute -top-3 -right-3 w-6 h-6 bg-pink-400 rounded-full"></div>
+                    </div>
                 </div>
+            </div>
+            
+            <!-- 滚动指示器 -->
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <a href="#featured-game" class="text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                    </svg>
+                </a>
             </div>
         </div>
     </section>
@@ -377,8 +411,8 @@
         </section>
         
         <!-- 返回顶部按钮 -->
-        <div id="back-to-top" class="fixed bottom-6 right-6 hidden">
-            <a href="#" class="bg-apple-darkblue text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition-colors duration-300">
+        <div id="back-to-top" class="fixed bottom-6 right-6 z-50 opacity-0 invisible transition-all duration-300">
+            <a href="#" class="bg-apple-darkblue text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
                 </svg>
@@ -386,64 +420,160 @@
         </div>
     </main>
 
-    <footer class="bg-apple-black text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">TinyGame</h3>
-                    <p class="text-gray-400 mb-4">挑战你的大脑，享受有趣的游戏体验</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                            </svg>
-                        </a>
+    <footer class="bg-apple-black text-white py-12 relative overflow-hidden">
+        <!-- 页脚装饰元素 -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"></div>
+        <div class="absolute top-0 right-0 opacity-10">
+            <svg width="400" height="400" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="40" fill="none" stroke="white" stroke-width="0.5"/>
+                <circle cx="50" cy="50" r="30" fill="none" stroke="white" stroke-width="0.5"/>
+                <circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="0.5"/>
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- 顶部LOGO和简介 -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-gray-800 pb-8">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="assets/images/logos/tinygame-logo.svg" alt="TinyGame Logo" class="h-12 w-auto mr-3">
+                    <div>
+                        <h3 class="text-xl font-bold">TinyGame</h3>
+                        <p class="text-gray-400 text-sm">挑战你的大脑，享受游戏体验</p>
                     </div>
                 </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">主页</a></li>
-                        <li><a href="#games" class="text-gray-400 hover:text-white transition-colors duration-300">游戏</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">关于我们</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">联系我们</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">游戏分类</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">益智游戏</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">反应游戏</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">策略游戏</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">休闲游戏</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">法律信息</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">隐私政策</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">服务条款</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie政策</a></li>
-                    </ul>
+                <div class="flex space-x-4">
+                    <a href="#" aria-label="Facebook" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:text-white hover:bg-gray-700 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">&copy; 2023 TinyGame. 保留所有权利。</p>
-                <p class="text-sm text-gray-500 mt-2">在 <a href="https://tinygame.shop" class="text-apple-darkblue hover:text-white transition-colors duration-300">tinygame.shop</a> 体验最好玩的多任务挑战游戏</p>
+            <!-- 主要区域 -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-apple-darkblue mr-2"></span>
+                        关于我们
+                    </h3>
+                    <p class="text-gray-400 mb-4 text-sm leading-relaxed">TinyGame是一个致力于为玩家提供高质量小游戏体验的平台。我们精心挑选并开发各种类型的游戏，旨在帮助玩家在休闲时间放松身心，同时锻炼认知能力。</p>
+                    <a href="#about" class="text-apple-darkblue hover:text-white transition-colors duration-300 text-sm flex items-center group">
+                        了解更多 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-apple-darkblue mr-2"></span>
+                        快速链接
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                主页
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#games" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                游戏
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                关于我们
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                                联系我们
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-apple-darkblue mr-2"></span>
+                        游戏分类
+                    </h3>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                益智游戏
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-red-500 rounded-full mr-2"></span>
+                                反应游戏
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
+                                策略游戏
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 flex items-center">
+                                <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                休闲游戏
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <span class="w-2 h-6 bg-apple-darkblue mr-2"></span>
+                        订阅更新
+                    </h3>
+                    <p class="text-gray-400 mb-4 text-sm">订阅我们的通讯以获取最新的游戏和功能更新。</p>
+                    <form class="flex items-center">
+                        <input type="email" placeholder="您的邮箱地址" class="bg-gray-800 text-white rounded-l-md py-2 px-4 text-sm flex-grow focus:outline-none focus:ring-1 focus:ring-apple-darkblue">
+                        <button type="submit" class="bg-apple-darkblue hover:bg-blue-700 transition-colors duration-300 text-white rounded-r-md py-2 px-4 text-sm">
+                            订阅
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- 法律信息 -->
+            <div class="border-t border-gray-800 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-gray-400 text-sm mb-4 md:mb-0">&copy; 2023 TinyGame. 保留所有权利。</div>
+                <div class="flex flex-wrap justify-center space-x-4 text-xs">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mb-2 md:mb-0">隐私政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mb-2 md:mb-0">服务条款</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mb-2 md:mb-0">Cookie政策</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300 mb-2 md:mb-0">知识产权</a>
+                </div>
             </div>
         </div>
     </footer>

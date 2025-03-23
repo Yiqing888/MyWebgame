@@ -1,0 +1,108 @@
+/* 深色模式样式 */
+
+/* 全局深色模式设置 */
+.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* 导航栏深色模式 */
+.dark-mode header {
+    background-color: var(--dark-bg-secondary);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dark-mode .nav-link {
+    color: var(--dark-text);
+}
+
+.dark-mode .nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* 卡片和容器深色模式 */
+.dark-mode .bg-white {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text);
+}
+
+.dark-mode .text-gray-700,
+.dark-mode .text-gray-600,
+.dark-mode .text-apple-black {
+    color: var(--dark-text-secondary);
+}
+
+.dark-mode .bg-apple-gray {
+    background-color: var(--dark-bg);
+}
+
+/* 边框和分隔线深色模式 */
+.dark-mode .border,
+.dark-mode .border-t,
+.dark-mode .border-b,
+.dark-mode .border-l,
+.dark-mode .border-r {
+    border-color: var(--dark-border);
+}
+
+/* 输入框深色模式 */
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode select {
+    background-color: var(--dark-bg);
+    border-color: var(--dark-border);
+    color: var(--dark-text);
+}
+
+.dark-mode input:focus,
+.dark-mode textarea:focus,
+.dark-mode select:focus {
+    border-color: var(--primary-color);
+}
+
+/* 按钮深色模式 */
+.dark-mode .bg-apple-darkblue:not(:hover) {
+    background-color: var(--primary-color);
+}
+
+/* 阴影调整 */
+.dark-mode .shadow-lg,
+.dark-mode .shadow-md,
+.dark-mode .shadow-sm {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
+
+/* 深色模式切换按钮 */
+.dark-mode-toggle {
+    transition: all 0.3s ease;
+}
+
+/* 标签深色模式 */
+.dark-mode .badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--dark-text);
+}
+
+/* Hero区域深色模式 */
+.dark-mode .bg-gradient-to-r {
+    filter: brightness(0.8);
+}
+
+/* 图片和视觉内容调整 */
+.dark-mode img {
+    filter: brightness(0.9);
+}
+
+/* 过渡效果 */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 深色模式下的链接 */
+.dark-mode a:not(.nav-link):not(.btn) {
+    color: var(--primary-color);
+}
+
+.dark-mode a:hover:not(.nav-link):not(.btn) {
+    color: var(--primary-hover);
+} 

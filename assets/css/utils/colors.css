@@ -24,3 +24,44 @@
   width: 80%;
   opacity: 0.3;
 }
+
+:root {
+    /* 主色调 */
+    --primary-color: #0071e3; /* 苹果蓝 */
+    --primary-hover: #0077ed;
+    --primary-dark: #0056b3;
+    
+    /* 中性色调 */
+    --bg-light: #f5f5f7; /* 苹果灰 */
+    --text-dark: #1d1d1f; /* 苹果黑 */
+    --text-secondary: #86868b;
+    --border-color: #d2d2d7;
+    --divider-color: #e8e8ed;
+    
+    /* 成功、警告和错误颜色 */
+    --success-color: #34c759;
+    --warning-color: #ff9500;
+    --error-color: #ff3b30;
+    
+    /* 分类标签颜色 */
+    --puzzle-color: #5e5ce6;
+    --reaction-color: #ff3b30;
+    --strategy-color: #ff9500;
+    --casual-color: #34c759;
+    
+    /* 深色模式颜色 */
+    --dark-bg: #1d1d1f;
+    --dark-bg-secondary: #2c2c2e;
+    --dark-text: #f5f5f7;
+    --dark-text-secondary: #a1a1a6;
+    --dark-border: #434343;
+}
+
+/* 可在此处添加使用上述变量的CSS类 */
+.text-primary { color: var(--primary-color); }
+.bg-primary { background-color: var(--primary-color); }
+.hover-primary:hover { color: var(--primary-hover); }
+.dark-mode { 
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
