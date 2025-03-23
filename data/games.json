@@ -1,20 +1,77 @@
-{
-  "games": [
-    {
-      "id": "multitask",
-      "title": "Multitask Challenge",
-      "description": "同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。",
-      "category": "puzzle",
-      "difficulty": 4,
-      "tags": ["反应", "多任务", "认知"],
-      "coverImage": "/assets/images/games/multitask.jpg",
-      "iframeSrc": "https://web-multitasking.vercel.app/",
-      "instructions": [
-        "使用方向键控制蓝色方块避开红色方块",
-        "同时使用A和D键保持绿色小球在平台上",
-        "查看你能坚持多长时间！"
-      ],
-      "featured": true
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "title": "Multitask Challenge",
+    "category": "益智类",
+    "description": "同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。",
+    "url": "/pages/games/detail/multitask.html",
+    "thumbnail": "https://placehold.co/600x400/651fff/ffffff?text=Multitask+Game",
+    "difficulty": 4,
+    "tags": ["反应", "专注", "多任务"],
+    "instructions": [
+      "使用方向键控制蓝色方块避开红色方块",
+      "同时使用A和D键保持绿色小球在平台上",
+      "查看你能坚持多长时间！"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "记忆匹配",
+    "category": "益智类",
+    "description": "测试并提升你的记忆力，通过匹配相同的卡片来挑战自己。",
+    "url": "/pages/games/detail/memory-match.html",
+    "thumbnail": "https://placehold.co/600x400/ff9800/ffffff?text=Memory+Match",
+    "difficulty": 2,
+    "tags": ["记忆", "注意力", "集中"],
+    "instructions": [
+      "点击卡片翻开它们",
+      "记住卡片的位置",
+      "匹配所有相同的卡片以完成游戏"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "数独挑战",
+    "category": "益智类",
+    "description": "经典数独游戏，考验你的逻辑思维和解谜能力。",
+    "url": "/pages/games/detail/sudoku.html",
+    "thumbnail": "https://placehold.co/600x400/4caf50/ffffff?text=Sudoku",
+    "difficulty": 3,
+    "tags": ["逻辑", "思考", "数字"],
+    "instructions": [
+      "填入数字1-9，使每行、每列和每个3x3宫格内数字不重复",
+      "使用逻辑推理填充空格",
+      "完成整个数独谜题"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "反应速度测试",
+    "category": "反应类",
+    "description": "测试你的反应速度，看看你能有多快！",
+    "url": "/pages/games/detail/reaction-test.html",
+    "thumbnail": "https://placehold.co/600x400/f44336/ffffff?text=Reaction+Test",
+    "difficulty": 1,
+    "tags": ["反应", "速度", "计时"],
+    "instructions": [
+      "等待屏幕变色",
+      "屏幕变绿后立即点击",
+      "查看你的反应时间"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "方块堆叠",
+    "category": "策略类",
+    "description": "精确地堆叠方块，创建最高的塔。需要耐心和精确度。",
+    "url": "/pages/games/detail/stack.html",
+    "thumbnail": "https://placehold.co/600x400/2196f3/ffffff?text=Stack",
+    "difficulty": 3,
+    "tags": ["精确", "专注", "技巧"],
+    "instructions": [
+      "点击屏幕时方块会停止移动",
+      "尝试将每个新方块精确地堆叠在前一个方块上",
+      "堆叠得越高得分越高"
+    ]
+  }
+]

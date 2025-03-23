@@ -1,66 +1,104 @@
 /**
- * 主脚本文件
- * 导入所有其他JavaScript模块
+ * 主JS文件
+ * 整合所有组件功能
  */
+
+// 初始化页面功能
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('TinyGame网站脚本已加载');
+    // 高亮当前活动导航项
+    highlightActiveNavItem();
     
-    // 导入各个模块
-    // 注意：在生产环境中，这些模块应该通过构建工具进行管理
-    const darkModeScript = document.createElement('script');
-    darkModeScript.src = 'assets/js/components/darkmode.js';
-    document.body.appendChild(darkModeScript);
+    // 添加平滑滚动
+    initSmoothScroll();
     
-    // 添加动画效果处理
-    initializeAnimations();
-    
-    // 设置游戏模块的懒加载
-    setupGameLazyLoading();
+    // 初始化游戏容器动画
+    initGameContainerAnimation();
 });
 
 /**
- * 初始化动画效果
+ * 高亮当前活动导航项
  */
-function initializeAnimations() {
-    const animatedElements = document.querySelectorAll('.animate-slide-up');
+function highlightActiveNavItem() {
+    // 获取当前页面路径
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
     
-    // 使用Intersection Observer检测元素是否进入视口
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
+    // 处理导航链接
+    const navLinks = document.querySelectorAll('.nav-link');
     
-    // 观察所有动画元素
-    animatedElements.forEach(element => {
-        observer.observe(element);
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // 检查链接是否匹配当前路径或哈希
+        if ((href === currentPath) || 
+            (href.startsWith('#') && href === currentHash) ||
+            (currentPath === '/' && href === '/')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
     });
 }
 
 /**
- * 设置游戏模块的懒加载
+ * 初始化平滑滚动
  */
-function setupGameLazyLoading() {
-    // 只有当游戏区域滚动到视图中时才加载iframe内容
-    const gameContainers = document.querySelectorAll('.game-container');
+function initSmoothScroll() {
+    // 获取所有锚点链接
+    const anchorLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
     
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                // 平滑滚动到目标元素
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80, // 减去导航栏高度和一些额外空间
+                    behavior: 'smooth'
+                });
                 
-                // 查找容器内的iframe，如果有的话
-                const iframe = entry.target.querySelector('iframe');
-                if (iframe && !iframe.src && iframe.dataset.src) {
-                    iframe.src = iframe.dataset.src;
-                }
+                // 更新URL哈希值，但不跳转
+                history.pushState(null, null, targetId);
             }
         });
-    }, { threshold: 0.1 });
-    
-    gameContainers.forEach(container => {
-        observer.observe(container);
     });
+}
+
+/**
+ * 初始化游戏容器动画
+ */
+function initGameContainerAnimation() {
+    // 检查IntersectionObserver API是否可用
+    if ('IntersectionObserver' in window) {
+        const gameContainers = document.querySelectorAll('.game-container');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // 元素进入视口，设置可见性
+                    entry.target.style.opacity = '1';
+                    // 停止观察此元素
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null, // 使用视口作为根
+            threshold: 0.1 // 当10%的元素可见时触发
+        });
+        
+        // 开始观察所有游戏容器
+        gameContainers.forEach(container => {
+            observer.observe(container);
+        });
+    } else {
+        // 回退方案：立即显示所有游戏容器
+        const gameContainers = document.querySelectorAll('.game-container');
+        gameContainers.forEach(container => {
+            container.style.opacity = '1';
+        });
+    }
 }

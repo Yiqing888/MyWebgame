@@ -3,26 +3,42 @@
     {
       "id": "puzzle",
       "name": "益智类",
-      "description": "锻炼思维和解谜能力的游戏",
-      "color": "blue",
+      "description": "挑战你的智力和思维能力，包含各种益智类游戏。",
       "icon": "puzzle-piece",
-      "coverImage": "/assets/images/categories/puzzle.jpg"
+      "color": "green",
+      "slug": "puzzle"
     },
     {
       "id": "reaction",
       "name": "反应类",
-      "description": "测试反应速度和手眼协调的游戏",
-      "color": "red",
+      "description": "测试你的反应速度和手眼协调能力。",
       "icon": "bolt",
-      "coverImage": "/assets/images/categories/reaction.jpg"
+      "color": "red",
+      "slug": "reaction"
     },
     {
       "id": "strategy",
       "name": "策略类",
-      "description": "需要战略思维和规划的游戏",
-      "color": "yellow",
+      "description": "需要深思熟虑和战略规划的游戏。",
       "icon": "chess",
-      "coverImage": "/assets/images/categories/strategy.jpg"
+      "color": "blue",
+      "slug": "strategy"
+    },
+    {
+      "id": "memory",
+      "name": "记忆类",
+      "description": "训练和提升你的记忆能力。",
+      "icon": "brain",
+      "color": "purple",
+      "slug": "memory"
+    },
+    {
+      "id": "multitasking",
+      "name": "多任务类",
+      "description": "同时处理多个任务，挑战你的注意力分配能力。",
+      "icon": "layer-group",
+      "color": "indigo",
+      "slug": "multitasking"
     }
   ]
 }

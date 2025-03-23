@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>益智类游戏 - TinyGame</title>
+    <meta name="description" content="探索我们的益智类游戏集合，挑战你的智力和思维能力。">
+    <link rel="canonical" href="https://tinygame.shop/pages/games/categories/puzzle.html">
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- SEO优化元标签 -->
+    <meta name="keywords" content="益智游戏, 解谜游戏, 逻辑游戏, 智力游戏, 免费游戏">
+    <meta property="og:title" content="益智类游戏 - TinyGame">
+    <meta property="og:description" content="探索我们的益智类游戏集合，挑战你的智力和思维能力。">
+    <meta property="og:url" content="https://tinygame.shop/pages/games/categories/puzzle.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="益智类游戏 - TinyGame">
+    <meta name="twitter:description" content="探索我们的益智类游戏集合，挑战你的智力和思维能力。">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/components/navigation.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            gray: '#f5f5f7',
+                            darkblue: '#0071e3',
+                            black: '#1d1d1f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-apple-gray text-apple-black min-h-screen flex flex-col">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-apple-darkblue flex items-center">
+                        <img src="/assets/images/logos/tinygame-logo.svg" alt="TinyGame Logo" class="h-10 w-auto mr-2">
+                    </a>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="hidden md:block search-container mx-4 flex-grow max-w-md">
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="搜索游戏..." class="w-full px-4 py-2 pl-10 pr-4 rounded-full border border-gray-300 focus:outline-none focus:border-apple-darkblue focus:ring-1 focus:ring-apple-darkblue">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                        <button id="search-button" class="absolute inset-y-0 right-0 pr-3 flex items-center">
+                            <span class="sr-only">搜索</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 hover:text-apple-darkblue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <!-- 搜索结果 -->
+                    <div id="search-results" class="search-results mt-2 hidden divide-y divide-gray-100"></div>
+                </div>
+                
+                <!-- 搜索结果遮罩 -->
+                <div id="search-overlay" class="search-overlay hidden"></div>
+                
+                <!-- 桌面导航 -->
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="nav-link hover:text-apple-darkblue transition-colors duration-300">首页</a>
+                    
+                    <!-- 游戏下拉菜单 -->
+                    <div class="dropdown">
+                        <a href="/pages/games/all.html" class="nav-link hover:text-apple-darkblue transition-colors duration-300 flex items-center active">
+                            游戏
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="/pages/games/categories/puzzle.html" class="dropdown-item bg-gray-100">益智类</a>
+                            <a href="/pages/games/categories/reaction.html" class="dropdown-item">反应类</a>
+                            <a href="/pages/games/categories/strategy.html" class="dropdown-item">策略类</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/pages/games/all.html" class="dropdown-item">全部游戏</a>
+                        </div>
+                    </div>
+                    
+                    <a href="/#about" class="nav-link hover:text-apple-darkblue transition-colors duration-300">关于</a>
+                    <a href="/#contact" class="nav-link hover:text-apple-darkblue transition-colors duration-300">联系我们</a>
+                </div>
+                
+                <!-- 移动端菜单按钮 -->
+                <div class="md:hidden flex items-center">
+                    <!-- 移动端搜索按钮 -->
+                    <button id="mobile-search-button" class="p-2 focus:outline-none mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                    </button>
+                    
+                    <!-- 汉堡菜单 -->
+                    <button id="mobile-menu-button" class="p-2 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- 移动端搜索框 -->
+            <div id="mobile-search" class="md:hidden pb-4 hidden">
+                <div class="search-container">
+                    <div class="relative">
+                        <input type="text" id="mobile-search-input" placeholder="搜索游戏..." class="w-full px-4 py-2 pl-10 pr-4 rounded-full border border-gray-300 focus:outline-none focus:border-apple-darkblue focus:ring-1 focus:ring-apple-darkblue">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- 移动端搜索结果 -->
+                    <div id="mobile-search-results" class="search-results mt-2 hidden"></div>
+                </div>
+            </div>
+            
+            <!-- 移动端菜单 -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="/" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">首页</a>
+                
+                <!-- 移动端游戏菜单 -->
+                <div class="py-2">
+                    <button id="mobile-games-dropdown" class="flex items-center w-full text-left nav-link active hover:text-apple-darkblue transition-colors duration-300">
+                        游戏
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+                        </svg>
+                    </button>
+                    <div id="mobile-games-submenu" class="pl-4 mt-1">
+                        <a href="/pages/games/categories/puzzle.html" class="block py-2 nav-link active hover:text-apple-darkblue transition-colors duration-300">益智类</a>
+                        <a href="/pages/games/categories/reaction.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">反应类</a>
+                        <a href="/pages/games/categories/strategy.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">策略类</a>
+                        <a href="/pages/games/all.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">全部游戏</a>
+                    </div>
+                </div>
+                
+                <a href="/#about" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">关于</a>
+                <a href="/#contact" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航容器 -->
+    <div id="breadcrumbs-container" class="container mx-auto px-4 mt-4 breadcrumb-container">
+        <!-- 面包屑导航会在这里显示 -->
+    </div>
+    
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- 分类标题 -->
+        <section class="mb-8 text-center">
+            <div class="inline-block rounded-full bg-green-100 text-green-800 px-3 py-1 text-sm font-medium mb-2">
+                益智类
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">益智类游戏</h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">挑战你的智力和思维能力，锻炼大脑灵活性的游戏集合。</p>
+        </section>
+        
+        <!-- 游戏列表 -->
+        <section class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 游戏卡片1 -->
+                <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <a href="/pages/games/detail/multitask.html">
+                        <img src="https://placehold.co/600x400/651fff/ffffff?text=Multitask+Game" alt="Multitask Challenge" class="w-full h-48 object-cover img-hover">
+                    </a>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="badge bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">益智类</span>
+                                <span class="text-xs text-gray-500">难度: 🌟🌟🌟🌟</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mt-2 mb-2">Multitask Challenge</h3>
+                        <p class="text-gray-600 mb-4">同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。</p>
+                        <div class="flex items-center justify-between">
+                            <a href="/pages/games/detail/multitask.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看详情
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-apple-darkblue text-white px-3 py-1 rounded-full text-sm hover:bg-blue-700 transition-colors duration-300">
+                                立即游戏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 游戏卡片2 -->
+                <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <a href="/pages/games/detail/memory-match.html">
+                        <img src="https://placehold.co/600x400/ff9800/ffffff?text=Memory+Match" alt="记忆匹配" class="w-full h-48 object-cover img-hover">
+                    </a>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="badge bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">益智类</span>
+                                <span class="text-xs text-gray-500">难度: 🌟🌟</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mt-2 mb-2">记忆匹配</h3>
+                        <p class="text-gray-600 mb-4">测试并提升你的记忆力，通过匹配相同的卡片来挑战自己。</p>
+                        <div class="flex items-center justify-between">
+                            <a href="/pages/games/detail/memory-match.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看详情
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-apple-darkblue text-white px-3 py-1 rounded-full text-sm hover:bg-blue-700 transition-colors duration-300">
+                                立即游戏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 游戏卡片3 -->
+                <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <a href="/pages/games/detail/sudoku.html">
+                        <img src="https://placehold.co/600x400/4caf50/ffffff?text=Sudoku" alt="数独挑战" class="w-full h-48 object-cover img-hover">
+                    </a>
+                    <div class="p-4">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="badge bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">益智类</span>
+                                <span class="text-xs text-gray-500">难度: 🌟🌟🌟</span>
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-bold mt-2 mb-2">数独挑战</h3>
+                        <p class="text-gray-600 mb-4">经典数独游戏，考验你的逻辑思维和解谜能力。</p>
+                        <div class="flex items-center justify-between">
+                            <a href="/pages/games/detail/sudoku.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看详情
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-apple-darkblue text-white px-3 py-1 rounded-full text-sm hover:bg-blue-700 transition-colors duration-300">
+                                立即游戏
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-white py-8 border-t border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="/" class="text-xl font-bold text-apple-darkblue flex items-center">
+                        <img src="/assets/images/logos/tinygame-logo.svg" alt="TinyGame Logo" class="h-8 w-auto mr-2">
+                        TinyGame
+                    </a>
+                    <p class="text-sm text-gray-600 mt-2">© 2023 TinyGame. 保留所有权利。</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="/#about" class="text-gray-600 hover:text-apple-darkblue transition-colors duration-300">关于</a>
+                    <a href="/#contact" class="text-gray-600 hover:text-apple-darkblue transition-colors duration-300">联系我们</a>
+                    <a href="/privacy.html" class="text-gray-600 hover:text-apple-darkblue transition-colors duration-300">隐私政策</a>
+                    <a href="/terms.html" class="text-gray-600 hover:text-apple-darkblue transition-colors duration-300">使用条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JavaScript 文件 -->
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/components/mobileMenu.js"></script>
+    <script src="/assets/js/components/breadcrumbs.js"></script>
+    <script src="/assets/js/components/search.js"></script>
+    <script src="/assets/js/components/backToTop.js"></script>
+    
+    <!-- 移动端游戏子菜单交互 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileGamesDropdown = document.getElementById('mobile-games-dropdown');
+            const mobileGamesSubmenu = document.getElementById('mobile-games-submenu');
+            const mobileSearchButton = document.getElementById('mobile-search-button');
+            const mobileSearch = document.getElementById('mobile-search');
+            
+            // 移动端游戏子菜单切换
+            if (mobileGamesDropdown && mobileGamesSubmenu) {
+                mobileGamesDropdown.addEventListener('click', () => {
+                    mobileGamesSubmenu.classList.toggle('hidden');
+                    
+                    // 切换箭头方向
+                    const arrow = mobileGamesDropdown.querySelector('svg');
+                    if (mobileGamesSubmenu.classList.contains('hidden')) {
+                        arrow.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />';
+                    } else {
+                        arrow.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />';
+                    }
+                });
+            }
+            
+            // 移动端搜索框切换
+            if (mobileSearchButton && mobileSearch) {
+                mobileSearchButton.addEventListener('click', () => {
+                    mobileSearch.classList.toggle('hidden');
+                    if (!mobileSearch.classList.contains('hidden')) {
+                        document.getElementById('mobile-search-input').focus();
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
