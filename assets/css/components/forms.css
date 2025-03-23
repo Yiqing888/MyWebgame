@@ -1,0 +1,6 @@
+/* 表单元素焦点效果 */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0071e3;
+  box-shadow: 0 0 0 2px rgba(0, 113, 227, 0.2);
+}

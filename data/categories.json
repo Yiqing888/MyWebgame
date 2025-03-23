@@ -1,0 +1,28 @@
+{
+  "categories": [
+    {
+      "id": "puzzle",
+      "name": "益智类",
+      "description": "锻炼思维和解谜能力的游戏",
+      "color": "blue",
+      "icon": "puzzle-piece",
+      "coverImage": "/assets/images/categories/puzzle.jpg"
+    },
+    {
+      "id": "reaction",
+      "name": "反应类",
+      "description": "测试反应速度和手眼协调的游戏",
+      "color": "red",
+      "icon": "bolt",
+      "coverImage": "/assets/images/categories/reaction.jpg"
+    },
+    {
+      "id": "strategy",
+      "name": "策略类",
+      "description": "需要战略思维和规划的游戏",
+      "color": "yellow",
+      "icon": "chess",
+      "coverImage": "/assets/images/categories/strategy.jpg"
+    }
+  ]
+}

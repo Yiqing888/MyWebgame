@@ -1,0 +1,17 @@
+/* 主样式文件 - 整合所有其他CSS文件 */
+
+/* 工具样式 */
+@import 'utils/colors.css';
+@import 'utils/animations.css';
+@import 'utils/responsive.css';
+
+/* 布局样式 */
+@import 'layout/header.css';
+@import 'layout/footer.css';
+@import 'layout/sections.css';
+
+/* 组件样式 */
+@import 'components/navigation.css';
+@import 'components/buttons.css';
+@import 'components/cards.css';
+@import 'components/forms.css';

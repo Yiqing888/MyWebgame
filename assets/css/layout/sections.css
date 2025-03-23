@@ -1,0 +1,34 @@
+/* 标题强调 */
+.emphasis {
+  position: relative;
+  display: inline-block;
+}
+
+.emphasis::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0071e3;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.emphasis:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 图片悬停效果 */
+.img-hover {
+  transition: all 0.3s ease;
+  filter: brightness(0.95);
+}
+
+.img-hover:hover {
+  filter: brightness(1.05);
+  transform: scale(1.02);
+}

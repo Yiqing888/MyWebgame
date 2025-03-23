@@ -1,0 +1,20 @@
+{
+  "games": [
+    {
+      "id": "multitask",
+      "title": "Multitask Challenge",
+      "description": "同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。",
+      "category": "puzzle",
+      "difficulty": 4,
+      "tags": ["反应", "多任务", "认知"],
+      "coverImage": "/assets/images/games/multitask.jpg",
+      "iframeSrc": "https://web-multitasking.vercel.app/",
+      "instructions": [
+        "使用方向键控制蓝色方块避开红色方块",
+        "同时使用A和D键保持绿色小球在平台上",
+        "查看你能坚持多长时间！"
+      ],
+      "featured": true
+    }
+  ]
+}

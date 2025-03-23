@@ -1,0 +1,26 @@
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0071e3;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #005bb8;
+}
+
+/* 内容分隔线样式 */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0071e3, transparent);
+  margin: 2rem auto;
+  width: 80%;
+  opacity: 0.3;
+}

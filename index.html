@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="Test your multitasking skills with this challenging brain game that pushes your limits.">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <script>
         tailwind.config = {
             theme: {
@@ -39,30 +39,57 @@
     </script>
 </head>
 <body class="bg-apple-gray text-apple-black min-h-screen flex flex-col">
-    <header class="bg-white shadow-sm">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center animate-fade-in">
-            <a href="/" class="text-2xl font-bold text-apple-darkblue emphasis">Multitask</a>
-            <nav class="hidden md:block">
-                <ul class="flex space-x-6">
-                    <li><a href="#how-to-play" class="hover:text-apple-darkblue transition emphasis">How to Play</a></li>
-                    <li><a href="#benefits" class="hover:text-apple-darkblue transition emphasis">Benefits</a></li>
-                    <li><a href="#tips" class="hover:text-apple-darkblue transition emphasis">Tips & Tricks</a></li>
-                </ul>
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-apple-darkblue flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M13 7H7v6h6V7z" />
+                            <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd" />
+                        </svg>
+                        <span>TinyGame</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#games" class="nav-link hover:text-apple-darkblue transition-colors duration-300">游戏</a>
+                    <a href="#about" class="nav-link hover:text-apple-darkblue transition-colors duration-300">关于</a>
+                    <a href="#contact" class="nav-link hover:text-apple-darkblue transition-colors duration-300">联系我们</a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-apple-black">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-white">
-            <ul class="space-y-2">
-                <li><a href="#how-to-play" class="block py-2 hover:text-apple-darkblue transition">How to Play</a></li>
-                <li><a href="#benefits" class="block py-2 hover:text-apple-darkblue transition">Benefits</a></li>
-                <li><a href="#tips" class="block py-2 hover:text-apple-darkblue transition">Tips & Tricks</a></li>
-            </ul>
+            
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#games" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">游戏</a>
+                <a href="#about" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">关于</a>
+                <a href="#contact" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">联系我们</a>
+            </div>
         </div>
     </header>
+    
+    <!-- Hero区域 -->
+    <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-16 md:py-24 bg-gradient-animate">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 animate-fade-in">
+                    <h1 class="text-3xl md:text-5xl font-bold mb-4">挑战你的多任务处理能力</h1>
+                    <p class="text-lg md:text-xl mb-6">测试你同时处理多项任务的能力，提升你的认知技能和反应速度</p>
+                    <a href="#featured-game" class="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 font-bold py-3 px-6 rounded-lg shadow-lg inline-block hover:shadow-xl transform hover:-translate-y-1">立即开始游戏</a>
+                </div>
+                <div class="md:w-1/2 flex justify-center animate-fade-in">
+                    <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=Multitask+Game" alt="Multitask Game" class="rounded-lg shadow-xl max-w-full h-auto img-hover">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <main class="flex-grow container mx-auto px-4 py-8">
         <section class="mb-12 text-center animate-fade-in">
@@ -177,13 +204,246 @@
                 <a href="#" class="inline-block bg-apple-darkblue text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition">Start Playing Now</a>
             </div>
         </section>
+
+        <!-- 特色游戏区域 -->
+        <section id="featured-game" class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    <span class="emphasis">特色游戏</span>
+                </h2>
+                
+                <div class="game-container bg-apple-gray rounded-xl shadow-lg overflow-hidden animate-slide-up shadow-hover" style="opacity: 0; transition: opacity 0.5s ease;">
+                    <div class="p-6">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                            <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-0">Multitask Challenge</h3>
+                            <div class="flex items-center space-x-2">
+                                <span class="badge bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">益智类</span>
+                                <span class="text-sm text-gray-500">难度: 🌟🌟🌟🌟</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4">同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。</p>
+                    </div>
+                    
+                    <div class="bg-black aspect-video w-full overflow-hidden">
+                        <iframe src="https://web-multitasking.vercel.app/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="p-6 bg-white">
+                        <h4 class="font-bold mb-2 text-lg">游戏说明:</h4>
+                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
+                            <li>使用方向键控制蓝色方块避开红色方块</li>
+                            <li>同时使用A和D键保持绿色小球在平台上</li>
+                            <li>查看你能坚持多长时间！</li>
+                        </ul>
+                        <div class="flex justify-end">
+                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看详情
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 游戏分类展示 -->
+        <section id="games" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    <span class="emphasis">游戏分类</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 游戏卡片1 -->
+                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
+                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=益智游戏" alt="益智游戏" class="w-full h-48 object-cover img-hover">
+                        <div class="p-4">
+                            <span class="badge bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">益智类</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2">益智游戏集合</h3>
+                            <p class="text-gray-600 mb-4">挑战你的智力和思维能力，包含多种益智游戏。</p>
+                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看全部 
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 游戏卡片2 -->
+                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
+                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=反应游戏" alt="反应游戏" class="w-full h-48 object-cover img-hover">
+                        <div class="p-4">
+                            <span class="badge bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">反应类</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2">反应速度游戏</h3>
+                            <p class="text-gray-600 mb-4">测试你的反应速度和手眼协调能力的游戏集合。</p>
+                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看全部
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- 游戏卡片3 -->
+                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
+                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=策略游戏" alt="策略游戏" class="w-full h-48 object-cover img-hover">
+                        <div class="p-4">
+                            <span class="badge bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">策略类</span>
+                            <h3 class="text-xl font-bold mt-2 mb-2">策略游戏集合</h3>
+                            <p class="text-gray-600 mb-4">锻炼你的战略思维和规划能力，包含多种策略游戏。</p>
+                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                查看全部
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 关于我们区域 -->
+        <section id="about" class="py-12 md:py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    <span class="emphasis">关于我们</span>
+                </h2>
+                
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=TinyGame" alt="About TinyGame" class="rounded-lg shadow-md max-w-full h-auto img-hover">
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <h3 class="text-xl font-bold mb-4">我们的故事</h3>
+                        <div class="h-1 w-16 bg-apple-darkblue mb-4"></div>
+                        <p class="text-gray-700 mb-4 leading-relaxed">TinyGame是一个致力于为玩家提供高质量小游戏体验的平台。我们精心挑选并开发各种类型的游戏，旨在帮助玩家在休闲时间放松身心，同时锻炼认知能力。</p>
+                        <p class="text-gray-700 mb-4 leading-relaxed">无论您是寻找益智挑战、反应测试还是有趣的休闲游戏，我们都能满足您的需求。所有游戏都经过优化，可以在各种设备上流畅运行。</p>
+                        <div class="mt-6">
+                            <a href="#contact" class="bg-apple-darkblue text-white hover:bg-blue-700 transition-colors duration-300 font-medium py-2 px-6 rounded-md inline-flex items-center">
+                                与我们联系
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 联系我们区域 -->
+        <section id="contact" class="py-12 md:py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
+                    <span class="emphasis">联系我们</span>
+                </h2>
+                
+                <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 py-6 px-6 text-white">
+                        <h3 class="text-xl font-bold">有任何问题或建议？</h3>
+                        <p class="mt-1">请随时与我们联系，我们将尽快回复您！</p>
+                    </div>
+                    
+                    <form class="p-6 space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-apple-darkblue focus:border-apple-darkblue transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-apple-darkblue focus:border-apple-darkblue transition-colors duration-200">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">主题</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-apple-darkblue focus:border-apple-darkblue transition-colors duration-200">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-apple-darkblue focus:border-apple-darkblue transition-colors duration-200"></textarea>
+                        </div>
+                        <div class="flex justify-end">
+                            <button type="submit" class="bg-apple-darkblue text-white hover:bg-blue-700 transition-colors duration-300 font-medium py-2 px-6 rounded-md shadow-hover transform hover:-translate-y-1">发送消息</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 返回顶部按钮 -->
+        <div id="back-to-top" class="fixed bottom-6 right-6 hidden">
+            <a href="#" class="bg-apple-darkblue text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition-colors duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                </svg>
+            </a>
+        </div>
     </main>
 
-    <footer class="bg-white py-8 animate-fade-in">
+    <footer class="bg-apple-black text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="text-center">
-                <p class="mb-4">&copy; 2023 Multitask Game. All rights reserved.</p>
-                <p class="text-sm text-gray-500">Challenge your brain with the ultimate multitasking game at <a href="https://tinygame.shop" class="text-apple-darkblue emphasis">tinygame.shop</a></p>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">TinyGame</h3>
+                    <p class="text-gray-400 mb-4">挑战你的大脑，享受有趣的游戏体验</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">主页</a></li>
+                        <li><a href="#games" class="text-gray-400 hover:text-white transition-colors duration-300">游戏</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">关于我们</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">联系我们</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">游戏分类</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">益智游戏</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">反应游戏</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">策略游戏</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">休闲游戏</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">法律信息</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">隐私政策</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">服务条款</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">Cookie政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 TinyGame. 保留所有权利。</p>
+                <p class="text-sm text-gray-500 mt-2">在 <a href="https://tinygame.shop" class="text-apple-darkblue hover:text-white transition-colors duration-300">tinygame.shop</a> 体验最好玩的多任务挑战游戏</p>
             </div>
         </div>
     </footer>
@@ -200,10 +460,13 @@
         // 监听页面滚动，添加动画效果
         document.addEventListener('DOMContentLoaded', function() {
             const animatedElements = document.querySelectorAll('.animate-slide-up');
+            const backToTopButton = document.getElementById('back-to-top');
+            const sections = document.querySelectorAll('section');
             
             function checkScroll() {
                 const triggerBottom = window.innerHeight * 0.8;
                 
+                // 处理动画元素
                 animatedElements.forEach(element => {
                     const elementTop = element.getBoundingClientRect().top;
                     if (elementTop < triggerBottom) {
@@ -212,11 +475,36 @@
                         element.style.opacity = '0';
                     }
                 });
+                
+                // 为进入视口的区域添加动画类
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('animate-fade-in');
+                    }
+                });
+                
+                // 处理返回顶部按钮
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.remove('hidden');
+                } else {
+                    backToTopButton.classList.add('hidden');
+                }
             }
+            
+            // 返回顶部按钮点击事件
+            backToTopButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
             
             window.addEventListener('scroll', checkScroll);
             checkScroll(); // 初始检查
         });
     </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html> 
