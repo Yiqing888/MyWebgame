@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全部游戏 - TinyGame</title>
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-center">全部游戏</h1>
+            <p class="text-center mt-2">浏览我们的全部游戏集合</p>
+        </div>
+    </header>
+    
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <!-- 益智类游戏 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold mb-4">益智类游戏</h2>
+                <ul class="space-y-2">
+                    <li><a href="/pages/games/detail/sudoku.html" class="text-blue-600 hover:underline">数独挑战</a></li>
+                    <li><a href="/pages/games/detail/memory-match.html" class="text-blue-600 hover:underline">记忆配对</a></li>
+                    <li><a href="/pages/games/detail/crossword.html" class="text-blue-600 hover:underline">填字游戏</a></li>
+                </ul>
+                <a href="/pages/games/categories/puzzle.html" class="block mt-4 text-blue-600 hover:underline">查看全部益智类游戏</a>
+            </div>
+            
+            <!-- 反应类游戏 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold mb-4">反应类游戏</h2>
+                <ul class="space-y-2">
+                    <li><a href="/pages/games/detail/reaction-time.html" class="text-blue-600 hover:underline">反应时间测试</a></li>
+                    <li><a href="/pages/games/detail/color-match.html" class="text-blue-600 hover:underline">颜色匹配</a></li>
+                    <li><a href="/pages/games/detail/aim-trainer.html" class="text-blue-600 hover:underline">瞄准训练</a></li>
+                </ul>
+                <a href="/pages/games/categories/reaction.html" class="block mt-4 text-blue-600 hover:underline">查看全部反应类游戏</a>
+            </div>
+            
+            <!-- 策略类游戏 -->
+            <div class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-bold mb-4">策略类游戏</h2>
+                <ul class="space-y-2">
+                    <li><a href="/pages/games/detail/chess.html" class="text-blue-600 hover:underline">国际象棋</a></li>
+                    <li><a href="/pages/games/detail/tower-defense.html" class="text-blue-600 hover:underline">塔防游戏</a></li>
+                    <li><a href="/pages/games/detail/resource-management.html" class="text-blue-600 hover:underline">资源管理</a></li>
+                </ul>
+                <a href="/pages/games/categories/strategy.html" class="block mt-4 text-blue-600 hover:underline">查看全部策略类游戏</a>
+            </div>
+        </div>
+        
+        <div class="text-center">
+            <a href="/" class="bg-blue-600 text-white px-6 py-2 rounded-lg inline-block hover:bg-blue-700">返回首页</a>
+        </div>
+    </main>
+    
+    <footer class="bg-white py-6 mt-8 border-t">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 TinyGame. 保留所有权利。</p>
+        </div>
+    </footer>
+</body>
+</html> 

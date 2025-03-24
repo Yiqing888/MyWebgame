@@ -86,11 +86,11 @@
                             </svg>
                         </a>
                         <div class="dropdown-content">
-                            <a href="/pages/games/categories/puzzle.html" class="dropdown-item">益智类</a>
-                            <a href="/pages/games/categories/reaction.html" class="dropdown-item">反应类</a>
-                            <a href="/pages/games/categories/strategy.html" class="dropdown-item">策略类</a>
+                            <a href="pages/games/categories/puzzle.html" class="dropdown-item">益智类</a>
+                            <a href="pages/games/categories/reaction.html" class="dropdown-item">反应类</a>
+                            <a href="pages/games/categories/strategy.html" class="dropdown-item">策略类</a>
                             <div class="dropdown-divider"></div>
-                            <a href="/pages/games/all.html" class="dropdown-item">全部游戏</a>
+                            <a href="pages/games/all.html" class="dropdown-item">全部游戏</a>
                         </div>
                     </div>
                     
@@ -145,10 +145,10 @@
                         </svg>
                     </button>
                     <div id="mobile-games-submenu" class="pl-4 mt-1 hidden">
-                        <a href="/pages/games/categories/puzzle.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">益智类</a>
-                        <a href="/pages/games/categories/reaction.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">反应类</a>
-                        <a href="/pages/games/categories/strategy.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">策略类</a>
-                        <a href="/pages/games/all.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">全部游戏</a>
+                        <a href="pages/games/categories/puzzle.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">益智类</a>
+                        <a href="pages/games/categories/reaction.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">反应类</a>
+                        <a href="pages/games/categories/strategy.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">策略类</a>
+                        <a href="pages/games/all.html" class="block py-2 nav-link hover:text-apple-darkblue transition-colors duration-300">全部游戏</a>
                     </div>
                 </div>
                 
@@ -228,106 +228,72 @@
             </div>
         </section>
 
-        <section id="how-to-play" class="mb-12 animate-slide-up">
-            <h2 class="text-3xl font-bold mb-6 text-center emphasis inline-block mx-auto">How to Play Multitask</h2>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-apple-darkblue rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
-                        <h3 class="font-semibold text-xl mb-2">Start Simple</h3>
-                        <p>Begin with a single task and get comfortable with the controls and objectives.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-apple-darkblue rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
-                        <h3 class="font-semibold text-xl mb-2">Stay Focused</h3>
-                        <p>As more tasks are added, maintain concentration on all activities simultaneously.</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-apple-darkblue rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
-                        <h3 class="font-semibold text-xl mb-2">Beat Your Score</h3>
-                        <p>Challenge yourself to improve your performance and last longer with each attempt.</p>
-                    </div>
+        <!-- 游戏分类导航区块 -->
+        <section id="game-categories" class="mb-16 animate-fade-in">
+            <h2 class="text-3xl font-bold text-center mb-8">探索游戏分类</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 益智类 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <a href="pages/games/categories/puzzle.html" class="block">
+                        <div class="h-40 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">益智类</h3>
+                            <p class="text-gray-600 mb-4">挑战你的智力和思维能力，锻炼大脑灵活性的游戏集合。</p>
+                            <span class="inline-flex items-center text-apple-darkblue font-medium">
+                                查看游戏
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </section>
 
-        <section id="benefits" class="mb-12 animate-slide-up">
-            <h2 class="text-3xl font-bold mb-6 text-center emphasis inline-block mx-auto">Benefits of Playing Multitask</h2>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-darkblue mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <!-- 反应类 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <a href="pages/games/categories/reaction.html" class="block">
+                        <div class="h-40 bg-gradient-to-r from-red-400 to-red-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                             </svg>
-                            Improved Cognitive Flexibility
-                        </h3>
-                        <p>Train your brain to switch between different tasks quickly and efficiently.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-darkblue mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            Enhanced Focus
-                        </h3>
-                        <p>Develop the ability to concentrate on multiple things simultaneously for longer periods.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-darkblue mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            Better Decision Making
-                        </h3>
-                        <p>Learn to make quick, accurate decisions under pressure and with divided attention.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-xl mb-3 flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-apple-darkblue mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            Stress Reduction
-                        </h3>
-                        <p>Get better at handling multiple demands, which can help reduce stress in daily life.</p>
-                    </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">反应类</h3>
+                            <p class="text-gray-600 mb-4">测试你的反应速度和手眼协调能力，让你的大脑和手指都保持最佳状态。</p>
+                            <span class="inline-flex items-center text-apple-darkblue font-medium">
+                                查看游戏
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
                 </div>
-            </div>
-        </section>
 
-        <section id="tips" class="mb-12 animate-slide-up">
-            <h2 class="text-3xl font-bold mb-6 text-center emphasis inline-block mx-auto">Tips & Tricks for Success</h2>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <ul class="space-y-4">
-                    <li class="flex">
-                        <span class="text-apple-darkblue font-bold mr-2">•</span>
-                        <span>Start by mastering individual tasks before trying to juggle multiple ones.</span>
-                    </li>
-                    <li class="flex">
-                        <span class="text-apple-darkblue font-bold mr-2">•</span>
-                        <span>Take short breaks between sessions to keep your mind fresh and focused.</span>
-                    </li>
-                    <li class="flex">
-                        <span class="text-apple-darkblue font-bold mr-2">•</span>
-                        <span>Practice rhythmic breathing to maintain calm during intense multitasking moments.</span>
-                    </li>
-                    <li class="flex">
-                        <span class="text-apple-darkblue font-bold mr-2">•</span>
-                        <span>Try to develop a scanning pattern that lets you quickly check the status of all tasks.</span>
-                    </li>
-                    <li class="flex">
-                        <span class="text-apple-darkblue font-bold mr-2">•</span>
-                        <span>Challenge friends to beat your score for extra motivation and fun competition.</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="mb-12 animate-slide-up">
-            <h2 class="text-3xl font-bold mb-6 text-center emphasis inline-block mx-auto">Ready to Challenge Yourself?</h2>
-            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-                <p class="mb-6 text-lg">Experience the thrill of testing your cognitive limits and improving your multitasking abilities.</p>
-                <a href="#" class="inline-block bg-apple-darkblue text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition">Start Playing Now</a>
+                <!-- 策略类 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                    <a href="pages/games/categories/strategy.html" class="block">
+                        <div class="h-40 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                            </svg>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">策略类</h3>
+                            <p class="text-gray-600 mb-4">挑战你的战略思维和决策能力，培养预判和规划技能的游戏集合。</p>
+                            <span class="inline-flex items-center text-apple-darkblue font-medium">
+                                查看游戏
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                </svg>
+                            </span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -338,101 +304,52 @@
                     <span class="emphasis">特色游戏</span>
                 </h2>
                 
-                <div class="game-container bg-apple-gray rounded-xl shadow-lg overflow-hidden animate-slide-up shadow-hover" style="opacity: 0; transition: opacity 0.5s ease;">
-                    <div class="p-6">
-                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
-                            <h3 class="text-xl md:text-2xl font-bold mb-2 md:mb-0">Multitask Challenge</h3>
-                            <div class="flex items-center space-x-2">
-                                <span class="badge bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">益智类</span>
-                                <span class="text-sm text-gray-500">难度: 🌟🌟🌟🌟</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-600 mb-4">同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。</p>
-                    </div>
-                    
-                    <div class="bg-black aspect-video w-full overflow-hidden">
-                        <iframe src="https://web-multitasking.vercel.app/" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    
-                    <div class="p-6 bg-white">
-                        <h4 class="font-bold mb-2 text-lg">游戏说明:</h4>
-                        <ul class="list-disc list-inside text-gray-700 mb-4 space-y-2">
-                            <li>使用方向键控制蓝色方块避开红色方块</li>
-                            <li>同时使用A和D键保持绿色小球在平台上</li>
-                            <li>查看你能坚持多长时间！</li>
-                        </ul>
-                        <div class="flex justify-end">
-                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
-                                查看详情
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
+                <div class="game-container bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up shadow-hover">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/2">
+                            <a href="/pages/games/detail/multitask.html">
+                                <img src="https://placehold.co/800x600/651fff/ffffff?text=Multitask+Challenge" alt="Multitask Challenge" class="w-full h-full object-cover img-hover">
                             </a>
+                        </div>
+                        <div class="md:w-1/2 p-6 flex flex-col justify-between">
+                            <div>
+                                <div class="flex items-center mb-2">
+                                    <span class="badge bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded mr-2">益智类</span>
+                                    <span class="text-sm text-gray-500">难度: 🌟🌟🌟🌟</span>
+                                </div>
+                                <h3 class="text-xl md:text-2xl font-bold mb-4">Multitask Challenge</h3>
+                                <p class="text-gray-600 mb-6">测试你同时处理多项任务的能力，提升认知技能和反应速度。这款挑战性游戏将推动你的认知极限，训练你的大脑同时处理多个任务。</p>
+                                
+                                <div class="mb-4">
+                                    <h4 class="font-bold mb-2 text-lg">游戏特点:</h4>
+                                    <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                        <li>多种任务同时进行，测试分配注意力能力</li>
+                                        <li>难度逐渐增加，适合各类玩家</li>
+                                        <li>训练认知灵活性和多任务处理能力</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="flex flex-wrap gap-4 mt-4">
+                                <a href="/pages/games/detail/multitask.html" class="bg-apple-darkblue text-white hover:bg-blue-700 transition-colors duration-300 font-medium py-2 px-6 rounded-md inline-flex items-center">
+                                    立即游戏
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                    </svg>
+                                </a>
+                                <a href="/pages/games/detail/multitask.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                    查看详情
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <!-- 游戏分类展示 -->
-        <section id="games" class="py-12 md:py-16">
-            <div class="container mx-auto px-4">
-                <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center">
-                    <span class="emphasis">游戏分类</span>
-                </h2>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- 游戏卡片1 -->
-                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
-                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=益智游戏" alt="益智游戏" class="w-full h-48 object-cover img-hover">
-                        <div class="p-4">
-                            <span class="badge bg-green-100 text-green-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">益智类</span>
-                            <h3 class="text-xl font-bold mt-2 mb-2">益智游戏集合</h3>
-                            <p class="text-gray-600 mb-4">挑战你的智力和思维能力，包含多种益智游戏。</p>
-                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
-                                查看全部 
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 游戏卡片2 -->
-                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
-                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=反应游戏" alt="反应游戏" class="w-full h-48 object-cover img-hover">
-                        <div class="p-4">
-                            <span class="badge bg-red-100 text-red-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">反应类</span>
-                            <h3 class="text-xl font-bold mt-2 mb-2">反应速度游戏</h3>
-                            <p class="text-gray-600 mb-4">测试你的反应速度和手眼协调能力的游戏集合。</p>
-                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
-                                查看全部
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- 游戏卡片3 -->
-                    <div class="game-container bg-white rounded-lg shadow-md overflow-hidden shadow-hover">
-                        <img src="https://placehold.co/600x400/f5f5f7/1d1d1f?text=策略游戏" alt="策略游戏" class="w-full h-48 object-cover img-hover">
-                        <div class="p-4">
-                            <span class="badge bg-yellow-100 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded">策略类</span>
-                            <h3 class="text-xl font-bold mt-2 mb-2">策略游戏集合</h3>
-                            <p class="text-gray-600 mb-4">锻炼你的战略思维和规划能力，包含多种策略游戏。</p>
-                            <a href="#" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
-                                查看全部
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- 关于我们区域 -->
         <section id="about" class="py-12 md:py-16 bg-white">
             <div class="container mx-auto px-4">
@@ -506,7 +423,7 @@
         <div id="back-to-top" class="fixed bottom-6 right-6 z-50 opacity-0 invisible transition-all duration-300">
             <a href="#" class="bg-apple-darkblue text-white rounded-full p-3 shadow-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7H3" />
                 </svg>
             </a>
         </div>
