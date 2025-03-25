@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "description": "在新建的 HTML 文件中自动插入 Google Analytics 跟踪代码",
+      "pattern": "*.html",
+      "insertions": [
+        {
+          "position": "after_tag",
+          "tag": "head",
+          "content": "    <!-- Google tag (gtag.js) -->\n    <script async src=\"https://www.googletagmanager.com/gtag/js?id=G-GEQ63RFGYC\"></script>\n    <script>\n      window.dataLayer = window.dataLayer || [];\n      function gtag(){dataLayer.push(arguments);}\n      gtag('js', new Date());\n\n      gtag('config', 'G-GEQ63RFGYC');\n    </script>"
+        }
+      ]
+    },
+    {
+      "description": "创建游戏详情页面的最佳实践",
+      "pattern": "pages/games/detail/*.html",
+      "procedure": [
+        "使用terminal命令复制现有模板: cp pages/games/detail/multitask.html pages/games/detail/新游戏名称.html",
+        "分步骤进行小规模编辑，避免'error calling tool'错误:",
+        "1. 首先修改页面标题、meta信息和SEO标签",
+        "2. 然后修改游戏详情信息区域（标题、描述、特点）",
+        "3. 更新游戏iframe嵌入链接和说明",
+        "4. 修改玩法指南部分",
+        "5. 更新游戏益处部分",
+        "6. 修改游戏攻略部分",
+        "7. 最后更新相关游戏推荐部分"
+      ]
+    }
+  ]
+} 

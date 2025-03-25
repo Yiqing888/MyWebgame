@@ -6,6 +6,15 @@
     <title>Multitask - Challenge Your Brain with Multiple Activities</title>
     <meta name="description" content="Test your multitasking skills with Multitask, a challenging brain game that pushes your limits. Play for free online now!">
     <link rel="canonical" href="https://tinygame.shop">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GEQ63RFGYC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GEQ63RFGYC');
+    </script>
     <!-- Favicon -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -189,8 +198,8 @@
                     <h1 class="text-3xl md:text-5xl font-bold mb-4">挑战你的<br>多任务处理能力</h1>
                     <p class="text-lg md:text-xl mb-6 text-white/90">测试你同时处理多项任务的能力，提升你的认知技能和反应速度。多项微任务，一次性挑战！</p>
                     <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                        <a href="#featured-game" class="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 font-bold py-3 px-6 rounded-lg shadow-lg inline-block hover:shadow-xl transform hover:-translate-y-1 text-center">立即开始游戏</a>
-                        <a href="#how-to-play" class="border-2 border-white text-white hover:bg-white/10 transition-colors duration-300 font-bold py-3 px-6 rounded-lg inline-block text-center">了解玩法</a>
+                        <a href="pages/games/detail/multitask.html#game-frame" class="bg-white text-purple-600 hover:bg-gray-100 transition-colors duration-300 font-bold py-3 px-6 rounded-lg shadow-lg inline-block hover:shadow-xl transform hover:-translate-y-1 text-center">立即开始游戏</a>
+                        <a href="pages/games/detail/multitask.html" class="border-2 border-white text-white hover:bg-white/10 transition-colors duration-300 font-bold py-3 px-6 rounded-lg inline-block text-center">了解玩法</a>
                     </div>
                 </div>
                 <div class="md:w-1/2 flex justify-center animate-fade-in">
@@ -218,21 +227,39 @@
     </section>
 
     <main class="flex-grow container mx-auto px-4 py-8">
-        <section class="mb-12 text-center animate-fade-in">
-            <h1 class="text-4xl md:text-5xl font-bold mb-4">挑战你的领地争夺能力</h1>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">在 Paper.io 中征服领地，扩张你的地盘并击败对手。一款考验策略思维的多人在线游戏。</p>
-            <div class="bg-white rounded-lg shadow-lg p-4 max-w-5xl mx-auto game-container">
-                <div class="relative pb-[56.25%] h-0 overflow-hidden rounded-md">
-                    <iframe id="game-player" 
-                            seamless="seamless" 
-                            scrolling="no" 
-                            webkitallowfullscreen="" 
-                            mozallowfullscreen="" 
-                            allowfullscreen="" 
-                            allow="autoplay; camera; fullscreen; clipboard-read; clipboard-write" 
-                            src="https://www.miniplay.com/embed/paper-io" 
-                            class="absolute top-0 left-0 w-full h-full">
-                    </iframe>
+        <!-- 新增特色游戏展示区域 -->
+        <section class="mb-16 rounded-xl overflow-hidden shadow-2xl bg-white">
+            <div class="relative">
+                <!-- 背景图 -->
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-80"></div>
+                
+                <!-- 内容 -->
+                <div class="relative z-10 flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-8 md:p-12 text-white">
+                        <h2 class="text-3xl md:text-4xl font-bold mb-4">热门推荐：Paper IO</h2>
+                        <p class="text-lg mb-6">在这款极具战略性的游戏中扩张你的领地，击败对手，成为地图霸主。一款考验策略思维的多人在线游戏。</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="pages/games/detail/paper-io.html#game-frame" class="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-lg shadow transition-all duration-300 transform hover:-translate-y-1">
+                                立即开玩
+                            </a>
+                            <a href="pages/games/detail/paper-io.html" class="bg-transparent text-white border-2 border-white hover:bg-white/10 font-bold py-3 px-6 rounded-lg transition-colors duration-300">
+                                了解更多
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="relative h-64 md:h-full">
+                            <img src="https://placehold.co/800x500/3f51b5/ffffff?text=Paper+IO" alt="Paper IO 游戏" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                                <a href="pages/games/detail/paper-io.html#game-frame" class="bg-white text-blue-600 rounded-full p-4 transform hover:scale-110 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -316,7 +343,7 @@
                 <div class="game-container bg-white rounded-xl shadow-lg overflow-hidden animate-slide-up shadow-hover">
                     <div class="flex flex-col md:flex-row">
                         <div class="md:w-1/2">
-                            <a href="/pages/games/detail/multitask.html">
+                            <a href="pages/games/detail/multitask.html">
                                 <img src="https://placehold.co/800x600/651fff/ffffff?text=Multitask+Challenge" alt="Multitask Challenge" class="w-full h-full object-cover img-hover">
                             </a>
                         </div>
@@ -340,13 +367,13 @@
                             </div>
                             
                             <div class="flex flex-wrap gap-4 mt-4">
-                                <a href="/pages/games/detail/multitask.html" class="bg-apple-darkblue text-white hover:bg-blue-700 transition-colors duration-300 font-medium py-2 px-6 rounded-md inline-flex items-center">
+                                <a href="pages/games/detail/multitask.html" class="bg-apple-darkblue text-white hover:bg-blue-700 transition-colors duration-300 font-medium py-2 px-6 rounded-md inline-flex items-center">
                                     立即游戏
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                     </svg>
                                 </a>
-                                <a href="/pages/games/detail/multitask.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
+                                <a href="pages/games/detail/multitask.html" class="text-apple-darkblue hover:underline font-medium inline-flex items-center">
                                     查看详情
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />

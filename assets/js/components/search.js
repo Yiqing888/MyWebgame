@@ -9,7 +9,7 @@ let gamesList = [];
 // 加载游戏数据
 async function loadGameData() {
   try {
-    const response = await fetch('/data/games.json');
+    const response = await fetch('data/games.json');
     if (!response.ok) {
       throw new Error('无法加载游戏数据');
     }
@@ -23,7 +23,7 @@ async function loadGameData() {
         title: 'Multitask Challenge', 
         category: '益智类', 
         description: '同时操控多个任务，测试你的大脑极限！这款游戏会让你体验真正的多任务挑战。',
-        url: '/pages/games/detail/multitask.html',
+        url: 'pages/games/detail/multitask.html',
         thumbnail: 'https://placehold.co/600x400/651fff/ffffff?text=Multitask+Game'
       }
     ];
